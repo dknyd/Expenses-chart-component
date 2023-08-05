@@ -1,0 +1,221 @@
+:root{
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+/* https://www.w3schools.com/ai/ai_chartjs.asp */
+
+*{
+  font-family: 'DM Sans', sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  margin: 0px;
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerTop{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--Soft-red);
+  color: var(--Very-pale-orange);
+  height: 4rem;
+  width: 30rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+}
+
+.myBalance{
+  font-weight: 400;
+}
+
+.myBalanceValue{
+  font-size: 2rem;
+}
+
+.containerBottom{
+  background-color: white;
+  margin-top: 1rem;
+  height: 20rem;
+  padding: 2rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+  width: 30rem;
+}
+
+h1{
+  margin: 0px;
+}
+
+.containerTitle{
+  justify-content: flex-start;
+}
+
+/* BAR CHART CHATGPT */
+.containerGraphs{
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: white
+}
+
+.numberAmount{
+  background-color: var(--Dark-brown);
+  color: white;
+  border-radius: 0.3rem;
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+  bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+
+.bar {
+  width: 3rem;
+  background-color: var(--Soft-red);
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+}
+
+.wed{
+  background-color: var(--Cyan);
+}
+
+.bar:hover{
+  
+  cursor: pointer;
+}
+
+.daySpan{
+  position: relative;
+  right: 2.3rem;
+  top: 2rem;
+  
+}
+
+hr{
+  position: relative;
+  color: var(--Cream);
+  top: 3rem;
+  height: 0px;
+  width: 90%;
+}
+
+/* CONTAINER RESULTS */
+.containerResults{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 30rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  right: 1rem;
+  border-radius: 1rem ;
+}
+
+.containerTotalSpending{
+  display:flex;
+  flex-direction: column;
+}
+
+.totalMonth{
+  color: var(--Medium-brown);
+}
+
+.totalAmount{
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.containerMonthlyIncrease{
+  margin-top: 1rem;
+}
+
+.increasePercent{
+  text-align: right;
+  font-weight: 700;
+}
+
+.fromLastMonth{
+  color: var(--Medium-brown);
+}
+
+
+
+/* BAR HOVER */
+
+/* Add this CSS to your existing styles */
+.bar {
+  position: relative; /* Make sure the parent is relatively positioned */
+}
+
+/* Create a pseudo-element to overlay the bar when hovering */
+.bar:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3); /* White-ish overlay with opacity */
+  z-index: 1; /* Place the overlay above the bar */
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .containerTop{
+    width: 23rem;
+  }
+
+  .containerBottom{
+    width: 23rem;
+
+  }
+
+  .containerResults{
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+    width: 25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    right: 2rem;
+  }
+
+  .daySpan{
+    position: relative;
+    right: 1.9rem;
+    top: 2rem;
+    
+  }
+
+  .bar{
+
+  }
+
+  .numberAmount{
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.5rem;
+  }
+}
+
+
+

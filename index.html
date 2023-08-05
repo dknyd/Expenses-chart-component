@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<title>Frontend Mentor | Expenses chart component</title>
+</head>
+<body>
+  <div class="containerMain">
+    <div class="containerTop">
+      <div class=containerBalance>
+        <div class="myBalance">My balance</div> 
+        <div class="myBalanceValue">$921.48</div>   
+      </div>
+      <img src="images/logo.svg" alt="">
+    </div>
+    <div class="containerBottom">
+      <div class="containerTitle">
+        <h1>Spending - Last 7 days</h1> 
+      </div>
+      <div class="containerGraphs">
+        
+        <div class="bar" data-amount="17.45"><div class="numberAmount">$17.45</div></div>
+        <span class="daySpan">mon</span>
+        <div class="bar" data-amount="34.91"><div class="numberAmount">$39.41</div></div>
+        <span class="daySpan">tue</span>
+        <div class="bar wed" data-amount="52.36"><div class="numberAmount">$52.36</div></div>
+        <span class="daySpan">wed</span>
+        <div class="bar" data-amount="31.07"><div class="numberAmount">$31.07</div></div>
+        <span class="daySpan">thu</span>
+        <div class="bar" data-amount="23.39"><div class="numberAmount">$23.39</div></div>
+        <span class="daySpan">fri</span>
+        <div class="bar" data-amount="43.28"><div class="numberAmount">$43.28</div></div>
+        <span class="daySpan">sat</span>
+        <div class="bar" data-amount="25.48"><div class="numberAmount">$25.48</div></div>
+        <span class="daySpan">sun</span>
+        
+      </div>
+      <hr>
+      <div class="containerResults">
+        
+        <div class="containerTotalSpending">
+          <div class="totalMonth">Total this month</div>
+          <div class="totalAmount">$478.33</div>
+          
+        </div>
+        <div class="containerMonthlyIncrease">
+          <div class="increasePercent">+2.4%</div> 
+          <div class="fromLastMonth">from last month</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
